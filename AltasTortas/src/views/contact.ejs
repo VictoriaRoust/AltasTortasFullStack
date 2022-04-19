@@ -1,0 +1,53 @@
+<%- include("includes/head") %> 
+
+<body>
+<!-- Header -->
+<%- include("includes/header") %> 
+<!-- Fin del Header -->
+  <!-- Main -->
+      <main>
+               
+<!-- aca a la izq deberian ir nuestros datos de contacto y todo eso -->
+         
+          <ul>
+          
+            <i class="fcontacto"></i>
+            <li>DONDE ENCONTRARNOS</li><br>
+            <li>Tel: 11-6465-4654</li><br>
+            <li>Horario: Lunes a Viernes</li>
+            <li>          de 10 a 20 hs</li><br>
+            <li>RETIRO DE PRODUCTOS</li><br>
+            <li>Direccion: Calle Falsa 123</li><br>
+            <li>Horario: Lunes a Sabado</li>
+            <li>         de 10 a 18 hs</li>
+          </ul>
+          
+<!-- aca a la derecha deberia ir un formulario para enviar mensaje de contacto -->
+         
+          <form action="" method="POST" class="fcontacto1">
+            <div class="fcontacto1">
+              <label><u>CONTACTO:</label></u><br><br>
+
+              <input type="text" name="usuario" placeholder="Nombre y Apellido" required minlength="5" >
+            </div>
+           
+            <div class="fcontacto1">
+              <input type="email" name="email" placeholder="E-mail" required minlength="7" >
+            </div>
+
+            <div class="fcontacto1">
+              <textarea name="comentario" placeholder="Deje su Comentario" id="comentario"></textarea> <br><br>
+            </div>
+            
+            
+            <section id="contenedorBotones">
+              <button class="button" type="submit">Enviar</button><br><br>
+              </section>
+                  
+          </form>
+
+        </form>
+      </main>
+<!-- Footer -->
+<%- include("includes/footer") %> 
+</body>

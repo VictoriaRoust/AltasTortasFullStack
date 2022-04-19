@@ -1,0 +1,30 @@
+main.carrito {
+  justify-items: center;
+}
+section.carrito  {
+  width: 50%;
+  margin-top: 5vh;
+  margin-left: 25%;
+  margin-bottom: 1rem;
+  background-color: gainsboro;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 12px;
+  padding-right: 12px;
+  border: dashed 0.2rem #EC018A;
+  text-align: center;
+  box-sizing: border-box;
+  }
+main.carrito a{
+    text-align:center;
+    text-decoration: none;
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;
+    display:inline-block;
+    color: rgb(0, 0, 0);
+    background: #cdb4db;
+    padding: 1rem 2rem;
+    white-space: nowrap;
+    border-radius: 5px;
+    margin: 10px 5px;
+    transition: all 0.2s ease-in-out;
+}

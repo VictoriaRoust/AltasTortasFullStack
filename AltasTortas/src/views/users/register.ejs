@@ -1,0 +1,70 @@
+<%- include("../includes/head") %> 
+
+<body>
+<!-- Header -->
+<%- include("../includes/header") %> 
+<!-- Fin del Header -->
+<!-- Main -->
+<main>
+<!-- Formularios -->
+
+<form action="/user/register" method="POST" class="formularioRegistro" enctype="multipart/form-data">
+  <div class="controlFormulario">
+      <input class="control" type="text" name="nombre" placeholder="Nombre y Apellido" required minlength="5" value="<%= locals.oldData ? oldData.nombre : null %>">
+        <% if (locals.errors && errors.nombre) {%>
+            <p> <%= errors.nombre.msg %>   </p>
+        <% } %>
+  </div>
+  <div class="controlFormulario">
+      <input class="control" type="text" name="nombreUsuario" placeholder="Nombre de usuario" required value="<%= locals.oldData ? oldData.nombreUsuario : null %>">
+      <% if (locals.errors && errors.nombreUsuario) {%>
+        <p> <%= errors.nombreUsuario.msg %>   </p>
+    <% } %>
+    </div>
+  <div class="controlFormulario">
+      <input class="control" type="email" name="E-mail" placeholder="E-mail" required minlength="7" value="<%= locals.oldData ? oldData.E-mail : null %>">
+      <% if (locals.errors && errors.E-mail) {%>
+        <p> <%= errors.E-mail.msg %>   </p>
+    <% } %>
+    </div>
+<!--   <div class="controlFormulario" id="nacimientos">
+      <h3>Fecha de nacimiento</h3>
+      <input class="control" type="date" name="nacimiento" required>
+  </div> -->
+  <!-- <div class="controlFormulario">
+      <input class="control" type="text" name="domicilio" placeholder="Domicilio" required>
+  </div> -->
+  <div class="controlFormulario" id="fotoPerfil">
+      <h3>Subí una imagen para generar tu avatar</h3>
+      <input type="file" name="avatar" id="Subirfoto">
+      <% if (locals.errors && errors.avatar) {%>
+        <p> <%= errors.avatar.msg %>   </p>
+    <% } %>
+  </div>
+  <div class="controlFormulario">
+    <div class="contenedorItems">
+        <input type="checkbox" name="categoryUser" value="Admin">
+        <label for="admin">Admin</label>
+    </div>
+
+
+    <div class="contenedorItems">
+        <input type="checkbox" name="categoryUser" value="cliente">
+        <label for="cliente">Cliente</label>
+    </div>
+  <div class="controlFormulario">
+      <input class="control" type="password" name="password" placeholder="Contraseña" required minlength="8"><br><br>
+      <% if (locals.errors && errors.password) {%>
+        <p> <%= errors.password.msg %>   </p>
+    <% } %>
+    </div>
+  <section id="contenedorBotones">
+  <button class="button" type="submit">Registrar</button>
+  <button class="button" type="reset">Borrar</button>
+  </section>
+</form>
+<!-- Cierre del Form -->
+</main>
+<!-- Footer -->
+<%- include("../includes/footer") %> 
+</body>

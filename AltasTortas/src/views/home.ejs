@@ -1,0 +1,49 @@
+<%-include("includes/head") %> 
+
+<body>
+<!-- Header -->
+<%- include("includes/header") %> 
+<!-- Fin del Header -->
+<!-- Main -->
+<main>
+
+  <figure id="banner">	
+    <img src="/img/BANNER TORTAS.jpg" alt="imagen banner">
+  </figure>
+
+<!-- Section -->
+<section class="productos">
+  <h3 class="titulares">¡No llegues a esa ocasión especial sin una SUPER TORTA!</h3>
+  
+  <% productos.forEach(producto => { %>
+   
+  <!-- Article -->
+    <article>
+      <figure>	
+        <img src="<%=producto.imagen%> " alt="imagen BANANASPLIT">
+      </figure>
+      <section>
+        <h3 class="descripciones"><%= producto.name %> </h3>
+        <p class="precios">$<%= producto.precio %></p>
+        <a href='/productos/detalle/<%= producto.id %>'  class="botonproductos">Ver más info</a>
+      </section>
+    </article>
+  <!-- Fin de Article -->
+
+  <% }) %>
+ 
+
+</section>
+<!-- Fin del Section -->
+<section class="productos">
+  <a href="/productos" class="botonproductos">Ver todos los productos</a>
+
+  <a href="/contacto" class="titulares">
+  ¿Tenés alguna duda? Contactanos
+  </a>
+</section>
+<!-- Fin del Section -->
+</main>
+<!-- Footer -->
+<%- include("includes/footer") %> 
+</body>
